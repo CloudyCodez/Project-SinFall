@@ -43,6 +43,14 @@ public final class AssetSetupActivity extends Activity {
     if(expanded!=spec.getLong("unpacked_size")||entries!=spec.getInt("files"))throw new IOException("Incomplete asset pack");
     try(FileOutputStream out=new FileOutputStream(done)){out.write(1);}zip.delete();
    }
+   // Base cache extraction can replace catalogs/manifests from a previous install.
+   // Re-arm only the packaged-content installers; account and game preferences stay intact.
+   File[] preferences=new File(getApplicationInfo().dataDir,"shared_prefs").listFiles();
+   if(preferences!=null)for(File preference:preferences){String name=preference.getName();
+    if(name.equals("offline_catalog.xml")||name.equals("offline_catalog_manifest.xml")||name.matches("offline_custom_[0-9]+\\.xml")){
+     if(!getSharedPreferences(name.substring(0,name.length()-4),0).edit().clear().commit())throw new IOException("Cannot refresh packaged content installer");
+    }
+   }
    try(FileOutputStream out=new FileOutputStream(marker())){out.write(manifest.getString("version").getBytes("UTF-8"));}
    runOnUiThread(this::launch);
   }catch(Exception e){report("Setup paused: "+e.getMessage()+"\nTap to retry. Completed packs will be skipped.");runOnUiThread(()->start.setEnabled(true));}
