@@ -13,6 +13,10 @@ import subprocess
 import xml.etree.ElementTree as ET
 import zipfile
 
+# APK readers require ZIP32. Python otherwise starts emitting ZIP64 offsets at 2 GiB,
+# although unsigned ZIP32 offsets remain valid until 4 GiB.
+zipfile.ZIP64_LIMIT = (1 << 32) - 1
+
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = 'v0.1.0-tester.1'
 ASSET_VERSION = 'assets-v0.1.0-tester.1'
