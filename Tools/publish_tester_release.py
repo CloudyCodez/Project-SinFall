@@ -10,8 +10,14 @@ def gh(*args):
     return subprocess.check_output(['gh', *map(str, args)], text=True, encoding='utf-8')
 
 
+def remote_release(tag):
+    # Draft tags are not available through /releases/tags until publication.
+    url = json.loads(gh('release', 'view', tag, '--repo', REPO, '--json', 'apiUrl'))['apiUrl']
+    return json.loads(gh('api', url))
+
+
 def verify_remote(tag, folder):
-    remote = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}'))
+    remote = remote_release(tag)
     for file in folder.iterdir():
         if file.is_file():
             asset = next(a for a in remote['assets'] if a['name'] == file.name)
@@ -38,7 +44,7 @@ def publish(output):
                 verify_remote(tag, folder)
                 print('Published release already matches:', tag, flush=True)
                 continue
-        remote = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}'))['assets']
+        remote = remote_release(tag)['assets']
         complete = {a['name']: a for a in remote}
         for file in sorted(folder.iterdir()):
             if not file.is_file():
