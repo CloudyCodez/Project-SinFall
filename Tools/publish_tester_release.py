@@ -73,7 +73,7 @@ def publish(output):
                         raise
                     print('Retrying upload:', file.name, flush=True)
         verify_remote(tag, folder)
-        print(gh('release', 'edit', tag, '--repo', REPO, '--draft=false', '--prerelease', '--latest=false'), flush=True)
+        print(gh('release', 'edit', tag, '--tag', tag, '--repo', REPO, '--draft=false', '--prerelease', '--latest=false'), flush=True)
     print(f'https://github.com/{REPO}/releases/tag/{VERSION}', flush=True)
 
 
