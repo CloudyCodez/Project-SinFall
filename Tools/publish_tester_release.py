@@ -16,12 +16,19 @@ def remote_release(tag):
     return json.loads(gh('api', url))
 
 
+def checksums(folder):
+    return {name: digest for digest, name in (line.split('  ', 1) for line in
+            (folder/'SHA256SUMS.txt').read_text().splitlines())}
+
+
 def verify_remote(tag, folder):
     remote = remote_release(tag)
+    expected = checksums(folder)
     for file in folder.iterdir():
         if file.is_file():
             asset = next(a for a in remote['assets'] if a['name'] == file.name)
-            assert asset['size'] == file.stat().st_size and asset['digest'] == 'sha256:'+sha(file), file.name
+            digest = expected.get(file.name) or sha(file)
+            assert asset['size'] == file.stat().st_size and asset['digest'] == 'sha256:'+digest, file.name
 
 
 def publish(output):
@@ -46,11 +53,13 @@ def publish(output):
                 continue
         remote = remote_release(tag)['assets']
         complete = {a['name']: a for a in remote}
+        expected = checksums(folder)
         for file in sorted(folder.iterdir()):
             if not file.is_file():
                 continue
             asset = complete.get(file.name)
-            if asset and asset.get('digest') == 'sha256:'+sha(file) and asset['size'] == file.stat().st_size:
+            digest = expected.get(file.name) or sha(file)
+            if asset and asset.get('digest') == 'sha256:'+digest and asset['size'] == file.stat().st_size:
                 print('Already uploaded:', file.name, flush=True)
                 continue
             print('Uploading', file.name, flush=True)
