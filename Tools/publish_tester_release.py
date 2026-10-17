@@ -10,6 +10,14 @@ def gh(*args):
     return subprocess.check_output(['gh', *map(str, args)], text=True, encoding='utf-8')
 
 
+def verify_remote(tag, folder):
+    remote = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}'))
+    for file in folder.iterdir():
+        if file.is_file():
+            asset = next(a for a in remote['assets'] if a['name'] == file.name)
+            assert asset['size'] == file.stat().st_size and asset['digest'] == 'sha256:'+sha(file), file.name
+
+
 def publish(output):
     receipt = json.loads((output/'main/verification.json').read_text())
     assert receipt['manifest_sha256'] == sha(output/'main/release.json'), 'Re-run payload verification'
@@ -26,8 +34,11 @@ def publish(output):
             print(gh('release', 'create', tag, '--repo', REPO, '--target', 'main', '--draft', '--prerelease',
                      '--title', title, '--notes-file', ROOT/'Release'/notes), flush=True)
         else:
-            assert json.loads(existing.stdout)['isDraft'], f'Refusing to overwrite published release {tag}'
-        remote = json.loads(gh('release', 'view', tag, '--repo', REPO, '--json', 'assets'))['assets']
+            if not json.loads(existing.stdout)['isDraft']:
+                verify_remote(tag, folder)
+                print('Published release already matches:', tag, flush=True)
+                continue
+        remote = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}'))['assets']
         complete = {a['name']: a for a in remote}
         for file in sorted(folder.iterdir()):
             if not file.is_file():
@@ -38,12 +49,15 @@ def publish(output):
                 continue
             print('Uploading', file.name, flush=True)
             # One file at a time limits peak memory and permits rerunning failed uploads.
-            print(gh('release', 'upload', tag, file, '--repo', REPO, '--clobber'), flush=True)
-        remote = json.loads(gh('api', f'repos/{REPO}/releases/tags/{tag}'))
-        files = {p.name: p for p in folder.iterdir() if p.is_file()}
-        for name, file in files.items():
-            asset = next(a for a in remote['assets'] if a['name'] == name)
-            assert asset['size'] == file.stat().st_size and asset['digest'] == 'sha256:'+sha(file), name
+            for attempt in range(3):
+                try:
+                    print(gh('release', 'upload', tag, file, '--repo', REPO, '--clobber'), flush=True)
+                    break
+                except subprocess.CalledProcessError:
+                    if attempt == 2:
+                        raise
+                    print('Retrying upload:', file.name, flush=True)
+        verify_remote(tag, folder)
         print(gh('release', 'edit', tag, '--repo', REPO, '--draft=false', '--prerelease', '--latest=false'), flush=True)
     print(f'https://github.com/{REPO}/releases/tag/{VERSION}', flush=True)
 
