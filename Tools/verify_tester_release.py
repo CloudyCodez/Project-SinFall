@@ -26,6 +26,11 @@ def verify(output):
     assert digest.hexdigest() == manifest['client']['sha256']
     assert length == manifest['client']['size']
     assert sha(output/'7DS-Offline-Client.apk') == manifest['client']['sha256']
+    with (output/'7DS-Offline-Client.apk').open('rb') as apk:
+        apk.seek(-65557, 2)
+        tail = apk.read()
+        end = tail.rfind(b'PK\x05\x06')
+        assert end >= 20 and tail[end-20:end-16] != b'PK\x06\x07', 'ZIP64 APK is not supported by Android'
     for item in manifest['assets']:
         path = output/'assets'/item['name']
         print('Verifying', path.name, flush=True)
