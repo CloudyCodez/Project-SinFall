@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTownDonationS2C 14300 {
+ CG_RequestBasePointGoldDonationOK([in] LocalTownDonationResult result);
+}

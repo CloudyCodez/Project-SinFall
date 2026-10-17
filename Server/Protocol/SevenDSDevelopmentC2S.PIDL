@@ -1,0 +1,9 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSDevelopmentC2S 10080
+{
+    CG_RequestSkinLevelUpBySkinMaterial([in] LocalLevelUpRequest request);
+    Reserved02();
+    Reserved03();
+    Reserved04();
+    CG_RequestSkinAwaken([in] int hero, [in] uint8 awaken);
+}

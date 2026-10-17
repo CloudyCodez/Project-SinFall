@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCosmeticEquipS2C 14110
+{
+    CG_RequestCostumeEquipOK([in] LocalPassiveResult userSkin);
+    CG_RequestCostumeUnEquipOK([in] LocalPassiveResult userSkin);
+}

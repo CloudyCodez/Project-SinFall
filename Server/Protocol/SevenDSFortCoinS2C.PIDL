@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFortCoinS2C 18960
+{
+ CG_RequestWeekStageCoinOpenOK([in] int area, [in] int remaining, [in] int reset, [in] int opened, [in] EmptyItemResults items);
+}

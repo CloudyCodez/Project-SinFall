@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMissionS2C 14180 {
+ CG_RequestMissionProgressOK([in] MissionResult result);
+ CG_RequestMissionClearOK([in] LocalMissionClearResult result);
+ ReservedMissionEventClearOK();
+ CG_RequestMissionGetAchievePointRewardOK([in] LocalAchievementResult result);
+}

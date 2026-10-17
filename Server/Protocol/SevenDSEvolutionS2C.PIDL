@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEvolutionS2C 14106
+{
+    CG_RequestSkinEvolutionOK([in] LocalEvolutionResult result);
+    CG_RequestSkinSkillLevelUpOK([in] LocalSkillResult result);
+}

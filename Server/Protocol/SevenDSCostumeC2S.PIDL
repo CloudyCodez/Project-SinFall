@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCostumeC2S 10294
+{
+    CG_RequestCostumeUnLock([in] IntList targetHeroIDList, [in] IntList costumeGroupIDList, [in] IntList targetHeroGroupIDList);
+}

@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRelicC2S 10106 { CG_RequestCostumeCraft([in] int costume,[in] bool quick); }

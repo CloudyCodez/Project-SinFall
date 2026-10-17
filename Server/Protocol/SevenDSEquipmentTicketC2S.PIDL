@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEquipmentTicketC2S 11107 { CG_RequestItemUseWeaponTicket([in] int item,[in] int selected); }

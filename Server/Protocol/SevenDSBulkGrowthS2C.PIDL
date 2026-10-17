@@ -1,0 +1,8 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSBulkGrowthS2C 14137 {
+ CG_RequestSkinAwakenAtOnceOK([in] LocalBulkGrowthResult result);
+ CG_RequestSkinTranscendAtOnceOK([in] LocalBulkGrowthResult result);
+ CG_RequestSkinEvolutionAtOnceOK([in] LocalBulkGrowthResult result);
+ CG_RequestSkinOverEvolutionAtOnceOK([in] LocalBulkGrowthResult result);
+ CG_RequestSkinExclusiveSkillAtOnceOK([in] LocalBulkGrowthResult result);
+}

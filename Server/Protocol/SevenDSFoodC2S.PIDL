@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFoodC2S 10875
+{
+ CG_RequestCookingUseCookingBuff([in] int foodItemID,[in] bool isAutoUse);
+}

@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFoodS2C 14235
+{
+ CG_RequestCookingUseCookingBuffOK([in] LocalFoodResult result);
+}

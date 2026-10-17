@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRecipeInfoC2S 10870
+{
+ CG_RequestCookingRecipeOrderInfo();
+}

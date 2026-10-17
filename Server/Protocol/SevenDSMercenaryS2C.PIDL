@@ -1,0 +1,3 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMercenaryS2C 18975
+{ CG_RequestMercenaryListOK([in] EmptyItemResults mercenaries); }

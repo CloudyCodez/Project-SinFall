@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSOneStepS2C 14030
+{
+ CG_RequestSkinOneStepEvolutionOK([in] LocalOneStepResult result);
+}

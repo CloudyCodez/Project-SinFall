@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCancelS2C 14000 { CG_CommonCancel([in] LocalCancelResult result); }

@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTownChestC2S 10903
+{
+ CG_RequestBasePointUniqueInteractiveOpen([in] int npcID);
+}

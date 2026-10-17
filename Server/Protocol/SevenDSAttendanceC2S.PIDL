@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSAttendanceC2S 10866
+{
+    CG_RequestAttendanceReward([in] uint8 deviceType);
+}

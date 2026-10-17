@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSQuestBattleS2C 18812
+{
+ CG_Request_Quest_Stage_StartOK([in] LocalStageStartResult result, [in] LocalPayback payback);
+ CG_Request_Quest_Stage_ClearOK([in] LocalStageClearResult result);
+ CG_Request_Quest_Stage_ContinueOK([in] EmptyItemResults items, [in] short count, [in] LocalPayback payback);
+}

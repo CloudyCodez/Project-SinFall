@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSQuestBattleC2S 10164
+{
+ CG_Request_Quest_Stage_Start([in] LocalStageStartRequest request);
+ CG_Request_Quest_Stage_Clear([in] LocalStageClearRequest request);
+ CG_Request_Quest_Stage_Continue();
+}

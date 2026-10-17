@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCoinShopC2S 10664
+{
+ CG_RequestCoinShopInfo();
+ CG_RequestCoinShopBuy([in] LocalCoinBuyRequest request);
+ CG_RequestEventCoinShopBuy([in] LocalCoinBuyRequest request);
+}

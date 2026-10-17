@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFinalBossRankS2C 18902
+{
+ CG_Request_FinalBoss_Season_Rank_InfoOK([in] LocalFinalBossRank result);
+}

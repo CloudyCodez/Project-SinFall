@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSQuestS2C 14184
+{
+    CG_RequestQuestStartOK([in] LocalQuestStartResult result);
+    CG_RequestQuestProgressOK([in] LocalQuestProgressResult result);
+    CG_RequestQuestClearOK([in] LocalQuestClearResult result);
+}

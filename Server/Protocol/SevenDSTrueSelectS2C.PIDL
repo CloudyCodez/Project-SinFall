@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTrueSelectS2C 15602 { CG_RequestSkinExceedSelectOK([in] LocalSystemsResult result); }

@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStraightLimitBreakC2S 10111 {
+ CG_RequestSkinOverEvolutionStraight([in] int targetHeroID, [in] uint8_t targetMaxLevelCount);
+}

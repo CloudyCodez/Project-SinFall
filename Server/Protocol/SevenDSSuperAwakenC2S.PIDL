@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSSuperAwakenC2S 10104
+{
+ CG_RequestSkinTranscend([in] LocalTranscendRequest request);
+ CG_RequestSkinTranscendReset([in] int hero, [in] uint8 itemIndex);
+}

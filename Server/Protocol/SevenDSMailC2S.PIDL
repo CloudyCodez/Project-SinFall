@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMailC2S 10450 {
+ CG_RequestMailList([in] uint8 language);
+ CG_RequestMailConfirm([in] int serial,[in] bool multi);
+ CG_RequestMailConfirmAll();
+}

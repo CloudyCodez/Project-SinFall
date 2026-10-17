@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFortCoinC2S 11110
+{
+ CG_RequestWeekStageCoinOpen([in] LocalFortCoinOpenRequest request);
+}

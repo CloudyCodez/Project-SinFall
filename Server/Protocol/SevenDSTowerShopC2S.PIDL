@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTowerShopC2S 12581 {
+ CG_RequestYggdrasilTowerShopInfo();
+ CG_RequestYggdrasilTowerShopBuy([in] int product,[in] uint8 count);
+}

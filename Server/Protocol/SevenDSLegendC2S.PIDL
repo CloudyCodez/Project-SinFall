@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSLegendC2S 10112
+{
+ CG_RequestSkinLegendEvolution([in] int targetHeroID);
+}

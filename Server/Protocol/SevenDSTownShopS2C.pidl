@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTownShopS2C 18511
+{
+ CG_RequestBasePointShopInfoOK([in] LocalTownShopResult result);
+ CG_RequestBasePointShopBuyOK([in] LocalTownBuyResult result);
+}

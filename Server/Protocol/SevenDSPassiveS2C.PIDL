@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSPassiveS2C 14126
+{
+    CG_RequestGetExclusiveSkillOK([in] LocalPassiveResult userSkin);
+}

@@ -1,0 +1,4 @@
+global SevenDSBattleReadyS2C 18801
+{
+    CG_RequestIngameBattleStartOK();
+}

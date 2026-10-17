@@ -1,0 +1,19 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEquipmentC2S 10120 {
+ CG_RequestWeaponEquip([in] int skin,[in] int serial,[in] int slot,[in] bool remove);
+ CG_RequestWeaponUnEquip([in] int skin,[in] int slot);
+ CG_RequestWeaponSell([in] LocalIntListRequest request,[in] int sellType,[in] int basepoint);
+ CG_RequestWeaponGrind([in] LocalIntListRequest request);
+ CG_RequestWeaponUpgrade([in] int serial,[in] int16 gauge);
+ CG_RequestWeaponUpgradeRetry([in] int serial,[in] int item);
+ CG_RequestWeaponEvolution([in] int serial);
+ CG_RequestWeaponEvolutionRetry([in] int serial,[in] int slot,[in] int item);
+ CG_RequestWeaponOptionEnhance([in] int serial,[in] int slot,[in] uint8 enhanceType);
+ CG_RequestWeaponLock([in] int serial);
+ CG_RequestWeaponUnLock([in] int serial);
+ CG_RequestWeaponEquipExchange([in] int pickedSerial,[in] int pickedSkin,[in] int targetSerial,[in] int targetSkin,[in] int slot,[in] bool remove);
+ CG_RequestWeaponEquipExchangeAll([in] int targetSkin,[in] int sourceSkin,[in] int mode);
+ CG_RequestWeaponEquipRecommend([in] int skin,[in] LocalIntListRequest request);
+ CG_RequestWeaponCarve([in] int eventSeq,[in] int serial,[in] uint8 heroGroup);
+ CG_RequestWeaponCarveRemove([in] int eventSeq,[in] int serial);
+}

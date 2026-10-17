@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSBossBattleC2S 10167
+{
+ CG_Request_Boss_Stage_Start([in] LocalStageStartRequest request);
+ CG_Request_Boss_Stage_Clear([in] LocalStageClearRequest request);
+ CG_Request_Boss_Stage_Continue();
+}

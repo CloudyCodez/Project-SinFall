@@ -1,0 +1,81 @@
+// Local response subset for the Grand Cross 2.113.1 game protocol.
+// Reserved entries preserve the request IDs recovered from the client.
+#include "GrandCrossRmiTypes.h"
+global SevenDSGameC2S 10000
+{
+    ReservedRequest01([in] int value);
+    ReservedRequest02([in] int value);
+    ReservedRequest03([in] int value);
+    CG_RequestTeamInfo([in] uint8 teamIndex);
+    CG_RequestTeamSlotChange([in] LocalTeamChange request);
+    ReservedRequest06([in] int value);
+    CG_RequestLobbyInfo();
+    ReservedRequest08([in] int value);
+    CG_RequestMercenaryList();
+    ReservedRequest10([in] int value);
+    ReservedRequest11([in] int value);
+    ReservedRequest12([in] int value);
+    ReservedRequest13([in] int value);
+    ReservedRequest14([in] int value);
+    CG_RequestEventList();
+    ReservedRequest16([in] int value);
+    ReservedRequest17([in] int value);
+    ReservedRequest18([in] int value);
+    ReservedRequest19([in] int value);
+    ReservedRequest20([in] int value);
+    ReservedRequest21([in] int value);
+    ReservedRequest22([in] int value);
+    ReservedRequest23([in] int value);
+    CG_RequestServerVersion();
+    ReservedRequest25([in] int value);
+    ReservedRequest26([in] int value);
+    ReservedRequest27([in] int value);
+    ReservedRequest28([in] int value);
+    ReservedRequest29([in] int value);
+    ReservedRequest30([in] int value);
+    ReservedRequest31([in] int value);
+    ReservedRequest32([in] int value);
+    ReservedRequest33([in] int value);
+    ReservedRequest34([in] int value);
+    ReservedRequest35([in] int value);
+    ReservedRequest36([in] int value);
+    ReservedRequest37([in] int value);
+    ReservedRequest38([in] int value);
+    ReservedRequest39([in] int value);
+    ReservedRequest40([in] int value);
+    ReservedRequest41([in] int value);
+    ReservedRequest42([in] int value);
+    ReservedRequest43([in] int value);
+    ReservedRequest44([in] int value);
+    ReservedRequest45([in] int value);
+    ReservedRequest46([in] int value);
+    ReservedRequest47([in] int value);
+    ReservedRequest48([in] int value);
+    ReservedRequest49([in] int value);
+    ReservedRequest50([in] int value);
+    CG_RequestSecurityToken();
+    CG_RequestNetmarbleAuth();
+    CG_RequestAuthenticateCreate([in] Proud::String netmarblePlayerID,
+                                 [in] NetmarbleSDKInfo sdkInfo);
+    ReservedRequest54([in] int value);
+    CG_RequestLogin();
+    CG_RequestLoginInstantly([in] int64 usn,[in] NetmarbleSDKInfo sdkInfo,[in] int sessionKey,[in] VersionInfo versionInfo,[in] Proud::String rejoinData,[in] int64 clientTimeTick,[in] int reconnectRequestRmiID,[in] uint8 languageType,[in] int talkChannelID,[in] int buildCountry);
+    ReservedRequest57();
+    ReservedRequest58();
+    ReservedRequest59();
+    ReservedRequest60();
+    ReservedRequest61();
+    ReservedRequest62();
+    ReservedRequest63();
+    ReservedRequest64();
+    ReservedRequest65();
+    ReservedRequest66();
+    ReservedRequest67();
+    ReservedRequest68();
+    ReservedRequest69();
+    ReservedRequest70();
+    ReservedRequest71();
+    ReservedRequest72();
+    ReservedRequest73();
+    CG_RequestBillingCouponVerify([in] int verifyType);
+}

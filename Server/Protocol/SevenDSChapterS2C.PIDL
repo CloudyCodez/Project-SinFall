@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSChapterS2C 14189 { CG_RequestQuestChapterClearOK([in] LocalChapterResult result); }

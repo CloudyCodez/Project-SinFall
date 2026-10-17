@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStoryStartC2S 10155
+{
+    CG_Request_Main_Stage_Start([in] LocalStageStartRequest request);
+    CG_Request_Main_Stage_Clear([in] LocalStageClearRequest request);
+}

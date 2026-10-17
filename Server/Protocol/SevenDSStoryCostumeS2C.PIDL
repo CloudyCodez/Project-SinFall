@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStoryCostumeS2C 14118
+{
+    CG_RequestStoryCostumeOK([in] EmptyItemResults getItems, [in] EmptyItemResults userStoryCostumeItemList);
+}

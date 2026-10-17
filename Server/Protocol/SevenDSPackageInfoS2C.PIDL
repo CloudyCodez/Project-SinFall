@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSPackageInfoS2C 18526 {
+ CG_RequestPackageShopInfoOK([in] LocalPackageInfo result);
+}

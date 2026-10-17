@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRecipeActiveS2C 14229
+{
+ CG_RequestRecipeActiveOK([in] LocalFoodResult result);
+}

@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTrueAwakeningC2S 10115 { CG_RequestSkinExceed([in] int hero,[in] uint8 rank,[in] uint8 type); }

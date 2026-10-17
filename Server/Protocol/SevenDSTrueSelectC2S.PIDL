@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTrueSelectC2S 13694 { CG_RequestSkinExceedSelect([in] int hero,[in] uint8 type); }

@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFinalBossShopC2S 10687 {
+ CG_RequestFinalBossShopInfo();
+ CG_RequestFinalBossShopBuy([in] int season,[in] int product,[in] uint8 count);
+}

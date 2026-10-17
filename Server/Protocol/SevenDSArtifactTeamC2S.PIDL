@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSArtifactTeamC2S 12602 {
+    CG_RequestArtifactTeamChange([in] LocalArtifactTeam request);
+    CG_RequestArtifactDescentBossTeamChange([in] LocalArtifactTeamList request);
+}

@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEventCoinS2C 18573
+{
+ CG_RequestEventCoinShopBuyOK([in] LocalCoinBuyResult result);
+}

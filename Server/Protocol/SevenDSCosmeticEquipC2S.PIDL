@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCosmeticEquipC2S 10092
+{
+    CG_RequestCostumeEquip([in] int costumeID, [in] int targetHeroID);
+    CG_RequestCostumeUnEquip([in] int costumeID, [in] int targetHeroID);
+}

@@ -1,0 +1,4 @@
+global SevenDSBootstrapC2S 10891
+{
+CG_RequestLobbySetAttendanceHero([in] int attendanceHeroID, [in] int activeAttendanceHeroID);
+}

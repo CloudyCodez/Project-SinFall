@@ -1,0 +1,3 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStoryInfoS2C 18799
+{ CG_RequestStageInfoOK([in] LocalStageInfo info); }

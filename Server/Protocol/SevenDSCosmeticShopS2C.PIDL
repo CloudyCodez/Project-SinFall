@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCosmeticShopS2C 18520
+{
+    CG_RequestCostumeShopInfoOK([in] EmptyItemResults shopBuyInfoList, [in] EmptyItemResults shopTimeItemInfoList);
+}

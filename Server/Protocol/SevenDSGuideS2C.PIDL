@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSGuideS2C 14193 {
+ CG_RequestQuestGuideListAllClearRewardOK([in] LocalNoItem result,[in] MissionResult mission);
+ CG_RequestQuestGuideListStepStartOK([in] LocalGuideResult result);
+ CG_RequestQuestGuideListStepClearOK([in] LocalGuideResult result);
+}

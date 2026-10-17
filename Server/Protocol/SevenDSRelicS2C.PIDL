@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRelicS2C 14124 { CG_RequestCostumeCraftOK([in] LocalSystemsResult result); }

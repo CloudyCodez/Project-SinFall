@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMaxAwakenS2C 14120
+{
+ CG_RequestSkinMaxAwakenOK([in] LocalGrowthResult result);
+}

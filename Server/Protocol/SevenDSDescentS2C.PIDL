@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSDescentS2C 18956 {
+ CG_Request_DescentBoss_EventStage_StartOK([in] LocalStageStartResult result,[in] EmptyItemResults extra,[in] LocalPayback payback);
+ CG_Request_DescentBoss_EventStage_ClearOK([in] LocalStageClearResult result,[in] LocalDescentInfo info,[in] EmptyItemResults progress,[in] int next,[in] int points);
+ CG_Request_DescentBoss_EventStage_ContinueOK([in] EmptyItemResults items,[in] int16 count,[in] LocalPayback payback);
+ CG_Request_DescentBoss_Event_Point_RewardOK([in] LocalDescentRewardResult result);
+}

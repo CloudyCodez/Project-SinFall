@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSWeekBattleC2S 10152
+{
+ CG_Request_Week_Stage_Start([in] LocalStageStartRequest request);
+ CG_Request_Week_Stage_Clear([in] LocalStageClearRequest request);
+ CG_Request_Week_Stage_Continue();
+}

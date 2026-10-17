@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRelicUpgradeC2S 10113 {
+ CG_RequestCostumeCraftUpgrade([in] int costume,[in] uint8 upgradeType);
+}

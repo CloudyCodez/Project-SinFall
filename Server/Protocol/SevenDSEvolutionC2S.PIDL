@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEvolutionC2S 10088
+{
+    CG_RequestSkinEvolution([in] int targetHeroID);
+    CG_RequestSkinSkillLevelUp([in] int targetHeroID, [in] uint8 skillLevelUpCount);
+}

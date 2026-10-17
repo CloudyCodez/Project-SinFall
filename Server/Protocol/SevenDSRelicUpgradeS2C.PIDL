@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRelicUpgradeS2C 14130 {
+ CG_RequestCostumeCraftUpgradeOK([in] LocalRelicUpgradeResult result);
+}

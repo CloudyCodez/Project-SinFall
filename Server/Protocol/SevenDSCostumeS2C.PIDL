@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCostumeS2C 14112
+{
+    CG_RequestCostumeUnLockOK([in] EmptyItemResults getItemResultInfoList, [in] EmptyItemResults updateSkinList, [in] EmptyItemResults equipSkinList, [in] MissionResult missionResult);
+}

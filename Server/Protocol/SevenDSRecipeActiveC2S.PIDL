@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSRecipeActiveC2S 10869
+{
+ CG_RequestRecipeActive([in] int recipeID);
+}

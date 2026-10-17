@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSOneStepC2S 10109
+{
+ CG_RequestSkinOneStepEvolution([in] int targetHeroID);
+}

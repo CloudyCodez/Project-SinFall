@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMailS2C 14150 {
+ CG_RequestMailListOK([in] LocalMailResult result);
+ CG_RequestMailConfirmOK([in] LocalMailResult result);
+ CG_RequestMailConfirmAllOK([in] LocalMailResult result);
+}

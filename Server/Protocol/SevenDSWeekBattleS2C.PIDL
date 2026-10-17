@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSWeekBattleS2C 18815
+{
+ CG_Request_Week_Stage_StartOK([in] LocalStageStartResult result, [in] LocalPayback payback, [in] LocalNoItem useItem);
+ CG_Request_Week_Stage_ClearOK([in] LocalStageClearResult result, [in] bool flag, [in] EmptyItemResults apList, [in] EmptyItemResults packageList, [in] EmptyItemResults items);
+ CG_Request_Week_Stage_ContinueOK([in] EmptyItemResults items, [in] short count, [in] LocalPayback payback);
+}

@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSAttendanceS2C 14226
+{
+    CG_RequestAttendanceRewardOK([in] AttendanceResult attendanceResult, [in] EmptyItemResults userPackageMissionInfoList, [in] EmptyItemResults resultQuestProgressInfoList);
+}

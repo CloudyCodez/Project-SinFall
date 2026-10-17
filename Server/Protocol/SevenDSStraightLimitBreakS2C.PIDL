@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStraightLimitBreakS2C 14128 {
+ CG_RequestSkinOverEvolutionStraightOK([in] LocalBreakResult result);
+}

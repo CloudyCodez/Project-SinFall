@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSSuperAwakenS2C 14122
+{
+ CG_RequestSkinTranscendOK([in] LocalGrowthResult result);
+ CG_RequestSkinTranscendResetOK([in] LocalGrowthResult result);
+}

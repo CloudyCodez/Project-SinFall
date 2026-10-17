@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSDescentC2S 10363 {
+ CG_Request_DescentBoss_EventStage_Start([in] LocalStageStartRequest request);
+ CG_Request_DescentBoss_EventStage_Clear([in] LocalStageClearRequest request);
+ CG_Request_DescentBoss_EventStage_Continue();
+ CG_Request_DescentBoss_Event_Point_Reward([in] int eventSEQ,[in] int step);
+}

@@ -1,0 +1,7 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSBossBattleS2C 18818
+{
+ CG_Request_Boss_Stage_StartOK([in] LocalStageStartResult result, [in] LocalPayback payback);
+ CG_Request_Boss_Stage_ClearOK([in] LocalStageClearResult result, [in] bool flag, [in] LocalDestroyDiscovery discovery, [in] bool first, [in] EmptyItemResults packageList);
+ CG_Request_Boss_Stage_ContinueOK([in] EmptyItemResults items, [in] short count, [in] LocalPayback payback);
+}

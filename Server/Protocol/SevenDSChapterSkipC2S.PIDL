@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSChapterSkipC2S 11111
+{
+ CG_RequestItemUseChapterSkip([in] int32_t skipID);
+}

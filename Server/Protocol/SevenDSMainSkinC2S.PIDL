@@ -1,0 +1,3 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSMainSkinC2S 10013
+{ CG_RequestMainSkinChange([in] int skin); }

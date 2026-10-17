@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSGachaItemC2S 10653
+{
+    CG_RequestItemGambleShopInfo();
+}

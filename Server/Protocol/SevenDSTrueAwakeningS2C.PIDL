@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTrueAwakeningS2C 14132 { CG_RequestSkinExceedOK([in] LocalSystemsResult result); }

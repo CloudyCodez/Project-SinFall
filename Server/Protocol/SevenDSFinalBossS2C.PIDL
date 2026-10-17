@@ -1,0 +1,8 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFinalBossS2C 18898
+{
+ CG_Request_FinalBoss_Stage_StartOK([in] LocalStageStartResult result,[in] EmptyItemResults events,[in] LocalPayback payback);
+ CG_Request_FinalBoss_Stage_ClearOK([in] LocalStageClearResult result,[in] LocalFinalBossClearExtra extra);
+ CG_Request_FinalBoss_Stage_ContinueOK([in] EmptyItemResults costs,[in] int16 count,[in] LocalPayback payback);
+ CG_Request_FinalBoss_Season_InfoOK([in] LocalFinalBossInfo result);
+}

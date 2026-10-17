@@ -1,0 +1,4 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSBulkLevelC2S 13570 {
+ CG_RequestSkinLevelUpAtOnce([in] LocalBulkLevelRequest request);
+}

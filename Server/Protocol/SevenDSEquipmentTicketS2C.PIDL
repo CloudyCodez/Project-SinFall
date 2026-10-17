@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEquipmentTicketS2C 14547 { CG_RequestItemUseWeaponTicketOK([in] LocalSystemsResult result); }

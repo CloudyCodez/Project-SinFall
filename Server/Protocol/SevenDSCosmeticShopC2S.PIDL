@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCosmeticShopC2S 10668
+{
+    CG_RequestCostumeShopInfo();
+}

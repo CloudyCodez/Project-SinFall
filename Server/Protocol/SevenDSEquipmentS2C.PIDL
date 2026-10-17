@@ -1,0 +1,19 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSEquipmentS2C 19399 {
+ CG_RequestWeaponEquipOK([in] LocalSystemsResult result);
+ CG_RequestWeaponUnEquipOK([in] LocalSystemsResult result);
+ CG_RequestWeaponSellOK([in] LocalSystemsResult result);
+ CG_RequestWeaponGrindOK([in] LocalSystemsResult result);
+ CG_RequestWeaponUpgradeOK([in] LocalSystemsResult result);
+ CG_RequestWeaponUpgradeRetryOK([in] LocalSystemsResult result);
+ CG_RequestWeaponEvolutionOK([in] LocalSystemsResult result);
+ CG_RequestWeaponEvolutionRetryOK([in] LocalSystemsResult result);
+ CG_RequestWeaponOptionEnhanceOK([in] LocalSystemsResult result);
+ CG_RequestWeaponLockOK([in] LocalSystemsResult result);
+ CG_RequestWeaponUnLockOK([in] LocalSystemsResult result);
+ CG_RequestWeaponEquipExchangeOK([in] LocalSystemsResult result);
+ CG_RequestWeaponEquipExchangeAllOK([in] LocalSystemsResult result);
+ CG_RequestWeaponEquipRecommendOK([in] LocalSystemsResult result);
+ CG_RequestWeaponCarveOK([in] LocalSystemsResult result);
+ CG_RequestWeaponCarveRemoveOK([in] LocalSystemsResult result);
+}

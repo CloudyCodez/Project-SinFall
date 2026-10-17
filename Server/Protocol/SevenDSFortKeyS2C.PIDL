@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFortKeyS2C 18977
+{
+ CG_RequestWeekStageKeyOpenOK([in] int area, [in] uint8 count, [in] int remaining, [in] LocalNoItem item, [in] MissionResult mission);
+}

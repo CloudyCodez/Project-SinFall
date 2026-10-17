@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSBoxS2C 14544 { CG_RequestItemUseBoxOpenOK([in] LocalBoxResult result); }

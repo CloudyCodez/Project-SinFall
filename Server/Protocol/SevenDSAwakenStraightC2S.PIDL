@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSAwakenStraightC2S 10119
+{
+    CG_RequestSkinAwakenStraight([in] int hero, [in] uint8 awaken);
+}

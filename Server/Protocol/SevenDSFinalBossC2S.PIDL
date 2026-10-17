@@ -1,0 +1,8 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFinalBossC2S 10186
+{
+ CG_Request_FinalBoss_Stage_Start([in] LocalStageStartRequest request);
+ CG_Request_FinalBoss_Stage_Clear([in] LocalStageClearRequest request);
+ CG_Request_FinalBoss_Stage_Continue();
+ CG_Request_FinalBoss_Season_Info();
+}

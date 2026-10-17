@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSTownInfoC2S 10007
+{
+ CG_RequestBasePointInfo([in] int basePointID);
+}

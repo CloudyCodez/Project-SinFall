@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSPassiveC2S 10108
+{
+    CG_RequestGetExclusiveSkill([in] int heroId);
+}

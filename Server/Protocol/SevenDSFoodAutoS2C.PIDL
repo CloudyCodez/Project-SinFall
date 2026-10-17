@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSFoodAutoS2C 14542
+{
+ CG_RequestFoodBuffAutoUseOnOffOK([in] LocalFoodResult result);
+}

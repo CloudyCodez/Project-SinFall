@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStoryCostumeC2S 10100
+{
+    CG_RequestStoryCostume([in] IntList idList);
+}

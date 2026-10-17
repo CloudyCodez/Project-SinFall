@@ -1,0 +1,5 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSCookingC2S 10868
+{
+ CG_RequestCookingStart([in] LocalCookingRequest request);
+}

@@ -1,0 +1,6 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSStoryStartS2C 18803
+{
+    CG_Request_Main_Stage_StartOK([in] LocalStageStartResult result);
+    CG_Request_Main_Stage_ClearOK([in] LocalStageClearResult result, [in] bool isFirstMainStageClear, [in] EmptyItemResults userPackageMissionInfoList);
+}

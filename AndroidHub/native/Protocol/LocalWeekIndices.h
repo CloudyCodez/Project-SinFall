@@ -1,0 +1,42 @@
+#pragma once
+namespace GcLocal {
+struct WeekIndex {int stage,index;};
+inline const WeekIndex WeekIndices[] = {
+{1,74},
+{2,75},
+{3,76},
+{4,77},
+{5,78},
+{31,81},
+{32,82},
+{33,83},
+{34,84},
+{35,85},
+{61,30},
+{62,31},
+{63,32},
+{64,33},
+{65,34},
+{66,79},
+{76,35},
+{77,36},
+{78,37},
+{79,38},
+{80,39},
+{81,80},
+{1768,1},
+{2001,61},
+{2002,62},
+{2003,63},
+{2004,64},
+{2005,65},
+{2101,66},
+{2102,67},
+{2103,68},
+{2201,73},
+{3001,69},
+{3002,70},
+{3003,71},
+};
+inline int WeekIndexForStage(int stage){for(const auto& r:WeekIndices)if(r.stage==stage)return r.index;return -1;}
+}

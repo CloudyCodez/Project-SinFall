@@ -1,0 +1,2 @@
+#include "GrandCrossRmiTypes.h"
+global SevenDSChapterC2S 10811 { CG_RequestQuestChapterClear([in] int region); }
